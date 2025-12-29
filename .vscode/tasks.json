@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Gradle: compileJava",
+            "type": "shell",
+            "command": "${workspaceFolder}\\sbb\\gradlew.bat",
+            "args": [
+                "compileJava"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/sbb"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gradle"
+            ],
+            "runOptions": {
+                "runOn": "default"
+            }
+        },
+        {
+            "label": "Gradle: Watch and Compile",
+            "type": "shell",
+            "command": "${workspaceFolder}\\sbb\\gradlew.bat",
+            "args": [
+                "compileJava",
+                "--continuous"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/sbb"
+            },
+            "problemMatcher": [
+                "$gradle"
+            ],
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "default"
+            }
+        }
+    ]
+}
+
